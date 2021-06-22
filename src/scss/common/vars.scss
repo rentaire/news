@@ -1,0 +1,43 @@
+$main-red: #c02033;
+$text-red: #bf1f33;
+
+$blue: #103f6e;
+
+$Roboto: "Roboto", sans-serif;
+$Montserrat: 'Montserrat', sans-serif;
+$Merriweather: 'Merriweather', serif;
+
+
+%title_articles {
+    font-family: $Roboto;
+    font-size: 2.4rem;
+    font-weight: 500;
+    color: #646464; 
+}
+
+%subtitle_articles {
+    font-family: $Montserrat;
+    font-size: 1.3rem;
+    font-weight: 400;
+    color: #dddddd;
+}
+
+%description_articles {
+    font-family: $Merriweather;
+    font-size: 1.6rem;
+    font-weight: 300;
+    color: #444444;
+}
+
+@mixin line($max-width, $height) {
+    &::after {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        max-width: $max-width;
+        height: $height;
+        background: #f0f0f0;
+    }
+}

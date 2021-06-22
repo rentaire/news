@@ -1,0 +1,234 @@
+.main {
+    background-color: #fafafa;
+    &__container {
+        margin: 0 auto;
+        padding: 0 5rem;
+    }
+}
+
+.main__slider {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 5rem;
+}
+
+.slider {
+    &__article {
+        width: 100%;
+        background-image: linear-gradient(to top, #000 0%, rgba(0, 0, 0, 0) 50%), url("../images/Bitmap.png");
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+    }
+    &__share {
+        color: #808084;
+        display: block;
+        font-size: 2rem;
+        text-align: right;
+        padding-top: 2rem;
+        padding-right: 3rem;
+        margin-bottom: 34.9rem;
+    }
+}
+
+.slider__share > .fa-share-alt {
+    border: 0.2rem solid #808084;
+    border-radius: 50%;
+    padding: 1rem;
+    &:hover {
+        color: #fff;
+        border-color: #fff;
+    }
+}
+
+.top-stories {
+    &__inner {
+        margin-bottom: 6rem;
+    }
+    &__content {
+        background-color: #fff;
+        box-shadow: 0px 0px 20px 0px rgba(180, 180, 180, 0.75);
+    }
+    &__title {
+        margin-bottom: 5rem;
+    }
+    &__articles {
+        padding-top: 3rem;
+        padding-bottom: 3.4rem;
+        display: flex;
+        justify-content: space-around;
+        position: relative;
+        @include line(100%, 0.2rem);
+    }
+    &__button {
+        text-transform: uppercase;
+        font-family: $Roboto;
+        font-size: 1.6rem;
+        color: #646464;
+        font-weight: bold;
+        display: block;
+        padding: 1.6rem 0;
+        text-align: center;
+    }
+}
+
+.block-title {
+    font-size: 14rem;
+    color: #ececec;
+    font-weight: bold;
+    font-family: $Montserrat;
+}
+
+.stories-button {
+    max-width: 34rem;
+}
+
+.article {
+    &__img {
+        margin-bottom: 2.4rem;
+    }
+    &__title {
+        @extend %title_articles;
+        margin-bottom: 2.4rem;
+        text-align: 2.9rem;
+        max-width: 34rem;
+        &--light {
+            color: #fff;
+            padding-left: 3.2rem;
+        }
+        &--dark {
+            &:hover {
+                color: $text-red;
+            }
+        }
+    }
+    &__subtitle {
+        @extend %subtitle_articles;
+        display: flex;
+        margin-bottom: 2rem;
+        padding-bottom: 1.5rem;
+        position: relative;
+        text-transform: uppercase;
+        @include line(35rem, 0.2rem);
+        &--light {
+            color: #fff;
+            padding-left: 3.2rem;
+            @include line(0rem, 0rem); //костыль
+        }
+    }
+    &__description {
+        @extend %description_articles;
+    }
+}
+
+.editors-pick {
+    &__title {
+        text-align: right;
+        margin-bottom: 5rem;
+    }
+    &__inner {
+        margin-bottom: 8rem;
+    }
+    &__content {
+        padding: 3rem 3rem 3.4rem 3rem;
+        display: flex;
+        background-color: #fff;
+        box-shadow: 0px 0px 20px 0px rgba(180, 180, 180, 0.75);
+    }
+    &__article {
+        padding-left: 3rem;
+    }
+}
+
+.inf {
+    &__top {
+        display: flex;
+        justify-content: space-between;
+        background-color: #fff;
+        box-shadow: 0px 0px 20px 0px rgba(180, 180, 180, 0.75);
+        margin-bottom: 9.5rem;
+    }
+    &__contact {
+        width: 33%;
+        background-color: $main-red;
+        color: #fff;
+        padding: 5.6rem 0 0 5rem;
+    }
+}
+
+.message {
+    width: 67%; //
+    &__inner {
+        padding: 5rem 0 0 8.3rem;
+    }
+    &__title {
+        font-family: $Roboto;
+        font-weight: normal;
+        font-size: 2.4rem;
+        color: $blue;
+        margin-bottom: 4.7rem;
+    }
+    &__send {
+        display: flex;
+        flex-wrap: wrap;
+        width: 100%;
+        max-width: 65rem;
+    }
+    &__input {
+        width: 50%;
+        padding-right: 10%;
+        margin-bottom: 4.3rem;
+        &--big {
+            width: 100%;
+        }
+    }
+}
+
+.send {
+    &__title {
+        font-family: $Roboto;
+        font-weight: normal;
+        font-size: 1.4rem;
+        color: #bababa;
+        margin-bottom: 0.9rem;
+    }
+    &__input {
+        border-width: 0px 0px 1px 0px;
+        color: #3e454c;
+        font-family: $Roboto;
+        font-weight: normal;
+        font-size: 2rem;
+        outline: none;
+        padding: 1.4rem 0;
+        width: 100%;
+    }
+}
+
+.send__button {
+    background-color: transparent;
+    border: none;
+    font-family: $Roboto;
+    font-weight: normal;
+    font-size: 1.5rem;
+    color: #2085c5;
+    border: 2px solid #97c6e4;
+    padding: 1.8rem 4.2rem;
+    border-radius: 8px;
+    margin-bottom: 6rem;
+}
+
+.contact {
+    &__title {
+        font-size: 2.4rem;
+        margin-bottom: 4.6rem;
+    }
+    &__inner {
+        font-size: 2rem;
+        font-family: $Roboto;
+        font-weight: normal;
+        margin-bottom: 3rem;
+        &:last-child {
+            margin: 0;
+        }
+    }
+}
