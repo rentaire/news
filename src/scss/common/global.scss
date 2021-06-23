@@ -98,6 +98,8 @@ body {
     }
     &__list-item {
         border-right: 1px solid #fff;
+        display: flex;
+        align-items: center;
         padding-right: 2.8rem;
         &:last-child {
             padding: 0;

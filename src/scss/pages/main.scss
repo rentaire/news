@@ -32,7 +32,7 @@
 }
 
 .slider__share > .fa-share-alt {
-    border: 0.2rem solid #808084;
+    border: 2px solid #808084;
     border-radius: 50%;
     padding: 1rem;
     &:hover {
@@ -86,6 +86,9 @@
 .article {
     &__img {
         margin-bottom: 2.4rem;
+        min-height: 22.6rem;
+        object-fit: cover;
+        text-align: center;
     }
     &__title {
         @extend %title_articles;
@@ -115,6 +118,9 @@
             padding-left: 3.2rem;
             @include line(0rem, 0rem); //костыль
         }
+        & > .author {
+            margin-right: 2rem;
+        }
     }
     &__description {
         @extend %description_articles;
@@ -140,19 +146,50 @@
     }
 }
 
+.editors-pick .article__img {
+    max-width: 73rem;
+}
+
+// .main__inf {
+//     background-image: url("../images/Bitmap-12.png");
+//     background-repeat: no-repeat;               !! Разобраться дома
+//     background-size: cover;
+//     background-position: center;
+
+// }
+
 .inf {
     &__top {
         display: flex;
         justify-content: space-between;
         background-color: #fff;
         box-shadow: 0px 0px 20px 0px rgba(180, 180, 180, 0.75);
-        margin-bottom: 9.5rem;
+        margin-bottom: 9.7rem;
     }
     &__contact {
         width: 33%;
         background-color: $main-red;
         color: #fff;
         padding: 5.6rem 0 0 5rem;
+    }
+    &__bottom-inner {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 6rem;
+    }
+    &__links {
+        //   border-right: .2rem solid #bababa;
+        flex-wrap: wrap;
+        align-items: center;
+        &:last-child {
+            border-right: none;
+        }
+        &-title {
+            font-family: $Roboto;
+            font-weight: bold;
+            color: #646464;
+            margin-bottom: 3.8rem;
+        }
     }
 }
 
@@ -221,14 +258,60 @@
     &__title {
         font-size: 2.4rem;
         margin-bottom: 4.6rem;
+        font-family: $Roboto;
+        font-weight: normal;
     }
     &__inner {
+        max-width: 80%;
         font-size: 2rem;
         font-family: $Roboto;
         font-weight: normal;
         margin-bottom: 3rem;
+        line-height: 3.5rem;
+    }
+    &__text {
+        margin-bottom: 3rem;
+        display: flex;
         &:last-child {
             margin: 0;
         }
+        & > .fa {
+            font-size: 2rem;
+            padding-right: 2rem;
+            padding-top: 0.5rem;
+        }
+    }
+}
+
+.links {
+    &__list-link {
+        font-family: $Roboto;
+        font-weight: normal;
+        color: #bababa;
+        font-size: 1.5rem;
+    }
+    &__list-item {
+        margin-bottom: 1.5rem;
+    }
+}
+
+.follow {
+    &__inner {
+        margin-bottom: 5.5rem;
+        background-color: #fff;
+        display: flex;
+    }
+    &__path {
+        margin: 0 -1px 0 0;
+        display: inline-block;
+        border: 1px solid #bababa;
+        color: #646464;
+        font-family: $Roboto;
+        font-weight: normal;
+        background-color: #fff;
+        padding: 1.5rem 0;
+        text-align: center;
+        width: 100%;
+        cursor: pointer;
     }
 }

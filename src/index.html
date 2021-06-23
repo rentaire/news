@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="icon" href="data:,">
     <link
         href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300&family=Montserrat:wght@400;700&family=Roboto:wght@300;400;500;700&display=swap"
         rel="stylesheet">
@@ -70,7 +71,7 @@
         </header>
 
         <div class="main">
-            <div class="main__slider">
+            <!--<div class="main__slider">
                 <a class="slider__article" href="#">
                     <div class="slider__share">
                         <i class="fas fa-share-alt"></i>
@@ -135,7 +136,7 @@
                         </div>
                     </div>
                 </a>
-            </div>
+            </div>-->
 
             <div class="main__container">
                 <div class="top-stories">
@@ -146,8 +147,8 @@
                         <div class="container">
                             <div class="top-stories__content">
                                 <div class="top-stories__articles">
-                                    <a class="stories-button" href="#">
-                                        <img class="article__img" src="images/Bitmap-8.png" alt="article img">
+                                    <a class="stories-button article" href="#">
+                                        <img class="article__img" src="images/Bitmap-8.png" alt="article image">
                                         <div class="article__title article__title--dark">
                                             Rape and injustice: Letter to my daughter
                                         </div>
@@ -168,7 +169,7 @@
                                         </div>
                                     </a>
 
-                                    <a class="stories-button" href="#">
+                                    <a class="stories-button article" href="#">
                                         <img class="article__img" src="images/Bitmap-6.png" alt="article img">
                                         <div class="article__title article__title--dark">
                                             How Apple paid just 0.005% tax on its global profits
@@ -188,7 +189,7 @@
                                         </div>
                                     </a>
 
-                                    <a class="stories-button" href="#">
+                                    <a class="stories-button article" href="#">
                                         <img class="article__img" src="images/Bitmap-7.png" alt="article img">
                                         <div class="article__title article__title--dark">
                                             Cities that could steal business from London
@@ -227,34 +228,36 @@
                         </div>
 
                         <div class="container">
-                            <a class="editors-pick__content" href="#">
-                                <img src="images/Bitmap-5.png" alt="#">
-                                <div class="editors-pick__article">
-                                    <div class="article__title">
-                                        Good times in Bad Durkheim as Wurstmarkt draws 685,000 wine
-                                    </div>
-                                    <div class="article__subtitle">
-                                        <div class="author">
-                                            John Smith
+                            <a class="editors-pick__content article" href="#">                     
+                                    <img class="article__img" src="images/Bitmap-5.png" alt="#">
+                                    <div class="editors-pick__article">
+                                        <div class="article__title article__title--dark">
+                                            Good times in Bad Durkheim as Wurstmarkt draws 685,000 wine
                                         </div>
-                                        <div class="date">
-                                            SEP 4, 2016
+                                        <div class="article__subtitle">
+                                            <div class="author">
+                                                John Smith
+                                            </div>
+                                            <div class="date">
+                                                SEP 4, 2016
+                                            </div>
                                         </div>
-                                    </div>
-                                    <div class="article__description">
-                                        All around me there are food stalls hot with barbecues of Bratwurst, large
-                                        skillets
-                                        of smoked Knackwurst sputtering fat, grates full of finger-like Nuremberg
-                                        sausages
-                                        over open fires, plus cauldrons of boiling frankfurters -- and these are just
-                                        the
-                                        ones I can pronounce.
+                                        <div class="article__description">
+                                            All around me there are food stalls hot with barbecues of Bratwurst, large
+                                            skillets
+                                            of smoked Knackwurst sputtering fat, grates full of finger-like Nuremberg
+                                            sausages
+                                            over open fires, plus cauldrons of boiling frankfurters -- and these are
+                                            just
+                                            the
+                                            ones I can pronounce.
 
-                                        I’m in the Wurstmarkt grounds in Bad Durkheim, a village in Pfalz near the start
-                                        of
-                                        Germany’s famed Wine Route...
+                                            I’m in the Wurstmarkt grounds in Bad Durkheim, a village in Pfalz near the
+                                            start
+                                            of
+                                            Germany’s famed Wine Route...
+                                        </div>
                                     </div>
-                                </div>
                             </a>
                         </div>
 
@@ -262,83 +265,164 @@
 
                     </div>
                 </div>
+            </div>
+            <div class="main__inf">
+                <div class="container">
+                    <div class="inf__top">
+                        <div class="message">
+                            <div class="message__inner">
+                                <div class="message__title">
+                                    Send us a Message
+                                </div>
+                                <form class="message__send" action="">
 
-                <div class="main__inf">
-                    <div class="container">
-                        <div class="inf__top">
-                            <div class="message">
-                                <div class="message__inner">
-                                    <div class="message__title">
-                                        Send us a Message
+                                    <div class="message__input">
+                                        <div class="send__title">
+                                            Your Name
+                                        </div>
+                                        <input class="send__input" type="text">
                                     </div>
-                                    <form class="message__send" action="">
-
-                                        <div class="message__input">
-                                            <div class="send__title">
-                                                Your Name
-                                            </div>
-                                            <input class="send__input" type="text">
+                                    <div class="message__input">
+                                        <div class="send__title">
+                                            Your Email Address
                                         </div>
-                                        <div class="message__input">
-                                            <div class="send__title">
-                                                Your Email Address
-                                            </div>
-                                            <input class="send__input" type="text">
+                                        <input class="send__input" type="text">
+                                    </div>
+                                    <div class="message__input">
+                                        <div class="send__title">
+                                            Your Phone Number
                                         </div>
-                                        <div class="message__input">
-                                            <div class="send__title">
-                                                Your Phone Number
-                                            </div>
-                                            <input class="send__input" type="text">
+                                        <input class="send__input" type="text">
+                                    </div>
+                                    <div class="message__input">
+                                        <div class="send__title">
+                                            Your Company
                                         </div>
-                                        <div class="message__input">
-                                            <div class="send__title">
-                                                Your Company
-                                            </div>
-                                            <input class="send__input" type="text">
+                                        <input class="send__input" type="text">
+                                    </div>
+                                    <div class="message__input message__input--big">
+                                        <div class="send__title">
+                                            Your Message
                                         </div>
-                                        <div class="message__input message__input--big">
-                                            <div class="send__title">
-                                                Your Message
-                                            </div>
-                                            <input class="send__input" type="text">
-                                        </div>
-                                        <button class="send__button">
-                                            Send
-                                        </button>
-                                    </form>
-                                </div>
+                                        <input class="send__input" type="text">
+                                    </div>
+                                    <button class="send__button">
+                                        Send
+                                    </button>
+                                </form>
                             </div>
+                        </div>
 
-                            <div class="inf__contact">
-                                <div class="contact__title">
-                                    Contact Information
-                                </div>
-                                <div class="contact__inner">
-                                    <div class="contact__address">
+                        <div class="inf__contact">
+                            <div class="contact__title">
+                                Contact Information
+                            </div>
+                            <div class="contact__inner">
+                                <div class="contact__text">
+
+                                    <div class="inf__address">
                                         154 Lorem Ipsum Street Denver, CO
                                     </div>
-                                    <div class="contact__phone">
+                                </div>
+                                <div class="contact__text">
+                                    <i class="fa fa-phone" aria-hidden="true"></i>
+                                    <div class="inf__phone">
                                         (888) 888 88 88
                                     </div>
-                                    <div class="contact__mail">
+
+                                </div>
+                                <div class="contact__text">
+                                    <i class="fa fa-envelope-o" aria-hidden="true"></i>
+                                    <div class="inf__mail">
                                         info@hiscompany.com
                                     </div>
-                                </div>
 
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <div class="inf__bottom">
+                        <div class="inf__bottom-inner">
+                            <div class="inf__links">
+                                <div class="inf__links-title">Userfull Links</div>
+                                <nav class="links">
+                                    <ul class="links__list">
+                                        <li class="links__list-item">
+                                            <a class="links__list-link" href="#">Business Sponsors</a>
+                                        </li>
+                                        <li class="links__list-item">
+                                            <a class="links__list-link" href="#">Solution to Threats</a>
+                                        </li>
+                                        <li class="links__list-item">
+                                            <a class="links__list-link" href="#">Contact us</a>
+                                        </li>
+                                        <li class="links__list-item">
+                                            <a class="links__list-link" href="#">Seven Mountains</a>
+                                        </li>
+                                        <li class="links__list-item">
+                                            <a class="links__list-link" href="#">Newsletters</a>
+                                        </li>
+                                    </ul>
+                                </nav>
+                            </div>
+                            <div class="inf__links">
+                                <div class="inf__links-title">Userfull Links</div>
+                                <nav class="links">
+                                    <ul class="links__list">
+                                        <li class="links__list-item">
+                                            <a class="links__list-link" href="#">Business Sponsors</a>
+                                        </li>
+                                        <li class="links__list-item">
+                                            <a class="links__list-link" href="#">Solution to Threats</a>
+                                        </li>
+                                        <li class="links__list-item">
+                                            <a class="links__list-link" href="#">Contact us</a>
+                                        </li>
+                                        <li class="links__list-item">
+                                            <a class="links__list-link" href="#">Seven Mountains</a>
+                                        </li>
+                                        <li class="links__list-item">
+                                            <a class="links__list-link" href="#">Newsletters</a>
+                                        </li>
+                                    </ul>
+                                </nav>
+                            </div>
+                            <div class="inf__links">
+                                <div class="inf__links-title">Userfull Links</div>
+                                <nav class="links">
+                                    <ul class="links__list">
+                                        <li class="links__list-item">
+                                            <a class="links__list-link" href="#">Business Sponsors</a>
+                                        </li>
+                                        <li class="links__list-item">
+                                            <a class="links__list-link" href="#">Solution to Threats</a>
+                                        </li>
+                                        <li class="links__list-item">
+                                            <a class="links__list-link" href="#">Contact us</a>
+                                        </li>
+                                        <li class="links__list-item">
+                                            <a class="links__list-link" href="#">Seven Mountains</a>
+                                        </li>
+                                        <li class="links__list-item">
+                                            <a class="links__list-link" href="#">Newsletters</a>
+                                        </li>
+                                    </ul>
+                                </nav>
                             </div>
                         </div>
-
-                        <div class="inf__bottom">
-
+                        <div class="follow">
+                            <div class="follow__inner">
+                                <button class="follow__path" href="#">Follow us on Google+</button>
+                                <button class="follow__path" href="#">Follow us on Facebook+</button>
+                                <button class="follow__path" href="#">Follow us on Twitte</button>
+                            </div>
                         </div>
-
-
                     </div>
                 </div>
-
-
             </div>
+
 
         </div>
 
