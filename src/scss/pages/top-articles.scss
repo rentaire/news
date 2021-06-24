@@ -1,0 +1,25 @@
+.top-articles > .top-stories__inner {
+    margin-bottom: 0;
+}
+
+.top-articles .article {
+    margin-bottom: 8rem;
+}
+
+.sort {
+    &__inner {
+        display: flex;
+        justify-content: space-around;
+        padding: 1rem 0;
+    }
+    &__button {
+        text-transform: uppercase;
+        padding: 2rem;
+        background-color: transparent;
+        border: none;
+        cursor: pointer;
+        font-family: $Roboto;
+        font-weight: normal;
+
+    }
+}

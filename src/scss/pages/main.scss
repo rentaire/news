@@ -50,9 +50,11 @@
         box-shadow: 0px 0px 20px 0px rgba(180, 180, 180, 0.75);
     }
     &__title {
-        margin-bottom: 5rem;
+        @extend %title;
     }
     &__articles {
+        display: flex;
+        flex-wrap: wrap;
         padding-top: 3rem;
         padding-bottom: 3.4rem;
         display: flex;
@@ -72,65 +74,25 @@
     }
 }
 
-.block-title {
-    font-size: 14rem;
-    color: #ececec;
-    font-weight: bold;
-    font-family: $Montserrat;
-}
 
 .stories-button {
     max-width: 34rem;
+    &__img {
+        display: flex;
+        width: 100%;
+        height: 22.6rem;
+        margin-bottom: 2.4rem;
+    }
 }
 
-.article {
-    &__img {
-        margin-bottom: 2.4rem;
-        min-height: 22.6rem;
-        object-fit: cover;
-        text-align: center;
-    }
-    &__title {
-        @extend %title_articles;
-        margin-bottom: 2.4rem;
-        text-align: 2.9rem;
-        max-width: 34rem;
-        &--light {
-            color: #fff;
-            padding-left: 3.2rem;
-        }
-        &--dark {
-            &:hover {
-                color: $text-red;
-            }
-        }
-    }
-    &__subtitle {
-        @extend %subtitle_articles;
-        display: flex;
-        margin-bottom: 2rem;
-        padding-bottom: 1.5rem;
-        position: relative;
-        text-transform: uppercase;
-        @include line(35rem, 0.2rem);
-        &--light {
-            color: #fff;
-            padding-left: 3.2rem;
-            @include line(0rem, 0rem); //костыль
-        }
-        & > .author {
-            margin-right: 2rem;
-        }
-    }
-    &__description {
-        @extend %description_articles;
-    }
+.content-exist > .article__subtitle {
+    @include line(35rem, 0.2rem);
 }
 
 .editors-pick {
     &__title {
         text-align: right;
-        margin-bottom: 5rem;
+        @extend %title;
     }
     &__inner {
         margin-bottom: 8rem;
@@ -141,6 +103,11 @@
         background-color: #fff;
         box-shadow: 0px 0px 20px 0px rgba(180, 180, 180, 0.75);
     }
+    &__img {
+        display: flex;
+        width: 100%;
+        height: 48.7rem;
+    }
     &__article {
         padding-left: 3rem;
     }
@@ -149,14 +116,6 @@
 .editors-pick .article__img {
     max-width: 73rem;
 }
-
-// .main__inf {
-//     background-image: url("../images/Bitmap-12.png");
-//     background-repeat: no-repeat;               !! Разобраться дома
-//     background-size: cover;
-//     background-position: center;
-
-// }
 
 .inf {
     &__top {

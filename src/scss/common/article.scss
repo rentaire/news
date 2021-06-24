@@ -1,0 +1,30 @@
+.article {
+    &__img {
+        object-fit: cover;
+        text-align: center;
+        max-height: 100%;
+    }
+    &__title {
+        @extend %title_articles;
+        margin-bottom: 2.4rem;
+        text-align: 2.9rem;
+    }
+    &__subtitle {
+        @extend %subtitle_articles;
+        display: flex;
+        margin-bottom: 2rem;
+        padding-bottom: 1.5rem;
+        position: relative;
+        text-transform: uppercase;
+        & > .author {
+            margin-right: 2rem;
+        }
+    }
+    &__description {
+        @extend %description_articles;
+    }
+    &__content {
+        @extend %content_articles;
+        margin-bottom: 3rem;
+    }
+}

@@ -1,0 +1,13 @@
+
+.single-article {
+    margin-top: 5rem;
+    & > .article__title {
+        text-transform: uppercase;
+        @extend %title;
+        font-size: 5rem;
+        color: #3e454c;
+    }
+    &__img {
+        margin-bottom: 3rem;
+    }
+}

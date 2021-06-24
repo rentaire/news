@@ -1,8 +1,24 @@
 module.exports = {
   mode: 'development',
-  output: {
-    filename: 'bundle.js',
+  entry: {
+    pages: "./src/js/pages/main.js",  //glob.sync
+    common: "./src/js/common.js",
+
   },
+  output: {
+    filename: '[name].bundle.js',
+  },
+  optimization: {
+    splitChunks: {
+        cacheGroups: {
+            commons: {
+                test: /[\\/]node_modules[\\/]/,
+                name: 'vendors',
+                chunks: 'all'
+            }
+        }
+    }
+},
   module: {
     rules: [
       {

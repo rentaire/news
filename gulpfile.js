@@ -12,8 +12,9 @@ const webpackStream = require('webpack-stream')
 const paths = {
     root: './dist',
     html: {
-        src: './src/*.html',
-        dest: './dist'
+        src: './src/html/*.html',
+        dest: './dist/html',
+        main: '.вшые/index.html'
     },
     styles: {
         common: './src/scss/common.scss',
@@ -24,7 +25,7 @@ const paths = {
         common: './src/js/common.js',
         src: './src/js/**/*.js',
         dest: './dist/js',
-        config: './webpack.config.js' 
+        config: './webpack.config.js'
     },
     images: {
         src: './src/images/**/*.+(png|jpg|gif|ico|svg|webp)',
@@ -65,7 +66,9 @@ function watching() {
 function browsersync() {
     browserSync.init({
         server: {
-            baseDir: paths.root
+            baseDir: "./dist",
+            //index: "/html/article.html" 
+            index: "/html/index.html" 
         },
         notify: false
     });

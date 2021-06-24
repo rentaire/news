@@ -1,0 +1,11 @@
+.footer {
+    background-color: $blue;
+    color: #fff;
+    &__inner {
+        display: flex;
+        justify-content: space-between;
+        padding: 3.4rem 0;
+        font-family: $Roboto;
+        font-weight: normal;
+    }
+}
