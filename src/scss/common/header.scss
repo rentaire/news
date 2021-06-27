@@ -23,7 +23,9 @@
 .search {
     display: flex;
     align-items: center;
-    &-input {
+}
+
+#search-input {
         color: #646464;
         padding: 1rem 15rem 1rem 2.3rem;
         font-size: 1.5rem;
@@ -36,7 +38,6 @@
         &::placeholder {
             color: #646464;
         }
-    }
 }
 
 .search > .fa-search {

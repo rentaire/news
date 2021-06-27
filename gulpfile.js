@@ -14,7 +14,7 @@ const paths = {
     html: {
         src: './src/html/*.html',
         dest: './dist/html',
-        main: '.вшые/index.html'
+        main: '.dist/index.html'
     },
     styles: {
         common: './src/scss/common.scss',
@@ -67,7 +67,6 @@ function browsersync() {
     browserSync.init({
         server: {
             baseDir: "./dist",
-            //index: "/html/article.html" 
             index: "/html/index.html" 
         },
         notify: false

@@ -1,24 +1,35 @@
+var glob = require("glob")
+
 module.exports = {
   mode: 'development',
-  entry: {
-    pages: "./src/js/pages/main.js",  //glob.sync
-    common: "./src/js/common.js",
+  entry: glob.sync('./src/js/**/*.js').reduce((acc, path) => {
+    const folder = path.replace('./src/js/', '').split('/').shift()
+    var name
 
-  },
+    if (folder == 'pages') {
+      name = path.split('/').pop().replace('.js', '')
+    } else {
+      name = 'common'
+    }
+
+    acc[name] = path
+
+    return acc
+  }, {}),
   output: {
     filename: '[name].bundle.js',
   },
   optimization: {
     splitChunks: {
-        cacheGroups: {
-            commons: {
-                test: /[\\/]node_modules[\\/]/,
-                name: 'vendors',
-                chunks: 'all'
-            }
+      cacheGroups: {
+        commons: {
+          test: /[\\/]node_modules[\\/]/,
+          name: 'vendors',
+          chunks: 'all'
         }
+      }
     }
-},
+  },
   module: {
     rules: [
       {
