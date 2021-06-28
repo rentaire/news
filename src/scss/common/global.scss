@@ -33,3 +33,11 @@ body {
     margin: 0 auto;
     padding: 0 1.5rem;
 }
+
+.arrowUp {
+    @include arrow(-135deg);
+}
+
+.arrowDown {
+    @include arrow(45deg);
+}

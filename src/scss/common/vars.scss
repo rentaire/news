@@ -60,3 +60,16 @@ $Merriweather: 'Merriweather', serif;
         background: #f0f0f0;
     }
 }
+
+@mixin arrow($degrees) {
+    &::after {
+        content: "";
+        position: absolute;
+        right: 0;
+        padding: .5rem;
+        margin-top: .5rem;
+        border: solid $main-red;
+        border-width: 0 .3rem .3rem 0;
+        transform: rotate($degrees);
+    }
+}

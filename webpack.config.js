@@ -6,15 +6,14 @@ module.exports = {
     const folder = path.replace('./src/js/', '').split('/').shift()
     var name
 
-    if (folder == 'pages') {
-      name = path.split('/').pop().replace('.js', '')
-    } else {
-      name = 'common'
-    }
+    // if (folder == 'pages') {
+    //   name = path.split('/').pop().replace('.js', '')
+      
+    // } 
 
-    acc[name] = path
-
+    acc[path.split('/').pop().replace('.js', '')] = path
     return acc
+
   }, {}),
   output: {
     filename: '[name].bundle.js',

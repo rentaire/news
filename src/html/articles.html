@@ -19,19 +19,22 @@
     <div class="wrapper">
 
         @@include('header.html')
-        
+
         <div class="sort">
             <div class="container">
                 <div class="sort__inner">
                     <div class="sort__text">
-                        Сортировать по:
+                        Sort by:
                     </div>
                     <div class="sort__btn">
-                        <button class="sort__btn-type">
-                            Популярности
+                        <button class="sort__btn-type arrowUp" onclick="arrowChange(this)">
+                            Title
                         </button>
-                        <button class="sort__btn-type">
-                            По дате
+                        <button class="sort__btn-type arrowUp" onclick="arrowChange(this)">
+                            Author
+                        </button>
+                        <button class="sort__btn-type arrowUp" onclick="arrowChange(this)">
+                            Data
                         </button>
                     </div>
                 </div>
@@ -50,14 +53,72 @@
                                 @@include('article.html')
                                 @@include('article.html')
                                 @@include('article.html')
-                            </div>
+                                @@include('article.html')
+                                @@include('article.html')
+                                @@include('article.html')
                             </div>
                         </div>
-
                     </div>
                 </div>
             </div>
         </div>
+    </div>
+    <div class="paginate">
+        <div class="container">
+            <nav class="pagination">
+                <ul class="pagination__list">
+                    <li class="pagination__list-item">
+                        <a class="pagination-prev" href="" onclick="prevPage(this)" rel="prev">
+                        </a>
+                    </li>
+                    <li class="pagination__list-item">
+                        <a class="pagination__list-page" href="">
+                            1
+                        </a>
+                    </li>
+                    <li class="pagination__list-item">
+                        <a class="pagination__list-page" href="">
+                            2
+                        </a>
+                    </li>
+                    <li class="pagination__list-item">
+                        <a class="pagination__list-page" href="">
+                            3
+                        </a>
+                    </li>
+                    <li class="pagination__list-item">
+                        <a class="pagination__list-page" href="">
+                            4
+                        </a>
+                    </li>
+                    <li class="pagination__list-item">
+                        <a class="pagination__list-page" href="">
+                            5
+                        </a>
+                    </li>
+                    <li class="pagination__list-item">
+                        <a class="pagination__list-page" href="">
+                            6
+                        </a>
+                    </li>
+                    <span class="pagination__list-item">
+                        <a class="pagination__list-page" href="">
+                            ...
+                        </a>
+                    </span>
+                    <li class="pagination__list-item">
+                        <a class="pagination__list-page" id="max-page" href="">
+                            12
+                        </a>
+                    </li>
+                    <li class="pagination__list-item">
+                        <a class="pagination-next" href="" onclick="nextPage(this)" rel="next">
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </div>
 
     </div>
     @@include('footer.html')
@@ -66,6 +127,8 @@
     <script src="https://use.fontawesome.com/939de38553.js"></script>
     <script src="/js/getArticles.bundle.js"></script>
     <script src="/js/common.bundle.js"></script>
+    <script src="/js/arrowChange.bundle.js"></script>
+    <script src="/js/pagination.bundle.js"></script>
 </body>
 
 </html>

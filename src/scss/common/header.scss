@@ -25,7 +25,7 @@
     align-items: center;
 }
 
-#search-input {
+.search-input {
         color: #646464;
         padding: 1rem 15rem 1rem 2.3rem;
         font-size: 1.5rem;
@@ -63,7 +63,7 @@
         border-right: 1px solid #fff;
         display: flex;
         align-items: center;
-        padding-right: 2.8rem;
+        padding-right: 4rem;
         &:last-child {
             padding: 0;
             border-right: none;
