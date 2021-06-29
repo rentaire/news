@@ -64,17 +64,17 @@ li > a.pagination__list-page {
     text-align: center;
 }
 
-.pagination-next,
-.pagination-prev {
+#pagination-next,
+#pagination-prev {
     color: #444444;
 }
 
-.pagination-next {
+#pagination-next {
     position: relative;
     @include arrow(-45deg);
 }
 
-.pagination-prev {
+#pagination-prev {
     position: relative;
     @include arrow(135deg);
 }

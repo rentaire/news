@@ -6,12 +6,16 @@ module.exports = {
     const folder = path.replace('./src/js/', '').split('/').shift()
     var name
 
-    // if (folder == 'pages') {
-    //   name = path.split('/').pop().replace('.js', '')
-      
-    // } 
+    if (folder == 'pages') {
+      name = path.split('/').pop().replace('.js', '')
+      acc[name] = path
+    }
+    if (folder == 'common.js') {
+      name = folder.replace('.js', '')
+      acc[name] =  path
+    }
 
-    acc[path.split('/').pop().replace('.js', '')] = path
+
     return acc
 
   }, {}),
@@ -42,5 +46,5 @@ module.exports = {
         }
       }
     ]
-  },
+  }
 };
