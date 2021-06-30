@@ -1,11 +1,11 @@
-// import "core-js/stable";
-// import "regenerator-runtime/runtime";
+import "regenerator-runtime/runtime";
 
-// export const sendRequest = async () => {
-//         const a = await 3
-//         console.log(a)
-//         return a
-// }
+
+export const sendRequest = async () => {
+        const a = await 3
+        console.log(a)
+        return a
+}
 
 
 

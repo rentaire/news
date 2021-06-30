@@ -32,7 +32,7 @@ page_links.forEach(link => {
     })
 });
 
-//sendRequest()
+sendRequest()
 
 
 var max_page = 13 //page_size
