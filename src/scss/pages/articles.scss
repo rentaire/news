@@ -49,15 +49,17 @@ li > a.pagination__list-page {
     height: 3rem;
     width: 3rem;
     display: block;
-    color: #444444;
     &:hover {
         background-color: rgb(221, 221, 221);
         border-radius: 50%;
         text-align: center;
     }
+    &:not(#current-page) {
+        color: #444444;
+    }
 }
 
-.current-page {
+#current-page {
     background-color: $text-red;
     color: #fff;
     border-radius: 50%;
@@ -78,3 +80,9 @@ li > a.pagination__list-page {
     position: relative;
     @include arrow(135deg);
 }
+
+/*
+.menu-item:after {
+  content: ' | ';
+}
+*/

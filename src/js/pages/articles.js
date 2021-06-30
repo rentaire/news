@@ -1,12 +1,11 @@
 import { parseUrl } from './../modules/parseUrl.js'
 import { createUrl } from './../modules/createUrl.js';
-import {showResult} from './../modules/showResult.js';
-import {sendRequest} from './../modules/sendRequest.js';
+import { showResult } from './../modules/showResult.js';
 import { sortArticle } from './../modules/sortArticle.js';
+import { sendRequest } from './../modules/sendRequest.js';
 
 
-
-var sort_btns = document.querySelectorAll('.sort__btn-type')
+var sort_btns = document.querySelectorAll('.sortby')
 
 sort_btns.forEach(btn => {
     btn.addEventListener('click', function (event) {
@@ -17,117 +16,61 @@ sort_btns.forEach(btn => {
             btn.classList.remove('arrowDown')
             btn.classList.add('arrowUp')
         }
-         console.log(btn.getAttribute('data-soprtby'))
+        //console.log(btn.getAttribute('data-soprtby'))
 
         // sortArticle(sendRequest(createUrl(parseUrl())),btn.getAttribute('data-soprtby'))
     })
 });
 
 
-console.log(sendRequest(createUrl(parseUrl())))
-//console.log(data)
-//showResult(data)
+var page_links = document.querySelectorAll('.pagination-page')
+
+page_links.forEach(link => {
+    link.addEventListener('click', (event) => {
+        console.log(link.getAttribute('data-page'))
+        document.location.href = window.location.search + '_page=' + link.getAttribute('data-page')
+    })
+});
+
+//sendRequest()
 
 
-var items = [
-    {
-        name: 'Edward',
-        value: 21
-    },
-    {
-        name: 'Sharpe',
-        value: 37
-    },
-    {
-        name: 'And',
-        value: 45
-    },
-    {
-        name: 'The',
-        value: -12
-    },
-    {
-        name: 'Magnetic'
-    },
-    {
-        name: 'Zeros', value: 37
-    }
-];
+var max_page = 13 //page_size
+var current_page_el = document.getElementById('current-page')
+var current_page_num = current_page_el.getAttribute('data-page')
+
+var stop_page = 3
+
+var current_page_url = parseUrl.page
 
 
-var articles =  [
-
-    {
-        "source": {
-            "id": null,
-            "name": "Newsonjapan.com"
-        },
-        "author": null,
-        "title": "Z",
-        "description": "Hedge funds and asset managers are increasingly turning to Japanese startups, attracted by some eye-popping past returns in the long-overlooked sector. (Japan Times)",
-        "url": "https://newsonjapan.com/html/newsdesk/article/131263.php",
-        "urlToImage": null,
-        "publishedAt": "2021-06-29T05:20:42Z",
-        "content": "Asian hedge fund firms including Pleiad Investment Advisors and global investment giants like T. Rowe Price Group Inc. and Baillie Gifford are providing late-stage growth capital to the nations most … [+1587 chars]"
-    },
-    {
-        
-        "source": {
-            "id": null,
-            "name": "Livemint"
-        },
-        "author": "Reuters",
-        "title": "Elon Musk set to tout Starlink progress as cost, demand hurdles linger",
-        "description": "Musk on Tuesday is expected to discuss Starlink's progress in a speech at the Mobile World Congress telecommunications event",
-        "url": "https://www.livemint.com/companies/people/elon-musk-set-to-tout-starlink-progress-as-cost-demand-hurdles-linger-11624943615747.html",
-        "urlToImage": "https://images.livemint.com/img/2021/06/29/600x338/Musk_1621360830504_1624943642021.jpg",
-        "publishedAt": "2021-06-29T05:15:36Z",
-        "content": "Don Joyce, a Nokia director working from home at a remote lake cottage in Canada, recently abandoned his painfully slow phone-line internet in favor of satellite broadband service Starlink, offered b… [+5483 chars]"
-    },
-    {
-        
-        "source": {
-            "id": null,
-            "name": "Livemint"
-        },
-        "author": "Reuters",
-        "title": "B",
-        "description": "Musk on Tuesday is expected to discuss Starlink's progress in a speech at the Mobile World Congress telecommunications event",
-        "url": "https://www.livemint.com/companies/people/elon-musk-set-to-tout-starlink-progress-as-cost-demand-hurdles-linger-11624943615747.html",
-        "urlToImage": "https://images.livemint.com/img/2021/06/29/600x338/Musk_1621360830504_1624943642021.jpg",
-        "publishedAt": "2021-06-29T05:15:36Z",
-        "content": "Don Joyce, a Nokia director working from home at a remote lake cottage in Canada, recently abandoned his painfully slow phone-line internet in favor of satellite broadband service Starlink, offered b… [+5483 chars]"
-    }
-]
-
-// sortArticle(articles, 'title')
-// console.log(articles)
-
-//console.log(articles)
-
-// var max_page = 13 //page_size
-// var current_page = parseUrl.page
+var max = document.getElementById('max-page')
+max.textContent = max_page
 
 
-// var max = document.getElementById('max-page')
-// max.textContent = max_page
-
-// var nextPage = () => {
-//     movePageNumber(1)
-//     current_page++
-// }
+var nextPage = document.getElementById('pagination-next').addEventListener('click', (event) => {
+    current_page_num < stop_page ? moveCurrentPage(current_page_num++) : movePageNumbers(1)
+    current_page_url++
+})
 
 
-// var prevPage = () => {
-//     movePageNumber(-1)
-//     current_page--
-// }
+var prevPage = document.getElementById('pagination-prev').addEventListener('click', (event) => {
+    current_page_num < stop_page ? moveCurrentPage(current_page_num--) : movePageNumbers(-1)
+    current_page_url--
+})
+
+var moveCurrentPage = (next_page) => {
+ //   console.log(page_links[current_page_num].classList)
+    page_links[current_page_num].classList.remove('current-page')
+  //  console.log(page_links[current_page_num].classList)
+    page_links[next_page].className += 'current-page'
+}
 
 
-// var movePageNumber = (side) => {
-//     var btn_numbers = document.querySelectorAll('.pagination__list-page')
-//     btn_numbers.forEach(num => {
-//         num.text = num.text + side
-//     });
-// }
+var movePageNumbers = (side) => {
+    page_links.forEach(page_num => {
+        page_num.text = parseInt(page_num.text) + side
+        page_num.dataset.page = parseInt(page_num.text)
+    });
+}
 

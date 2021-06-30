@@ -27,14 +27,14 @@
                         Sort by:
                     </div>
                     <div class="sort__btn">
-                        <button class="sort__btn-type arrowUp" data-soprtby='title'>
+                        <button class="sort__btn-type arrowUp sortby" data-soprtby='title'>
                             Title
                         </button>
-                        <button class="sort__btn-type arrowUp" data-soprtby='author'>
-                        Author
+                        <button class="sort__btn-type arrowUp sortby" data-soprtby='author'>
+                            Author
                         </button>
-                        <button class="sort__btn-type arrowUp" data-soprtby='data'>
-                        Data
+                        <button class="sort__btn-type arrowUp sortby" data-soprtby='data'>
+                            Data
                         </button>
                     </div>
                 </div>
@@ -74,51 +74,51 @@
             <nav class="pagination">
                 <ul class="pagination__list">
                     <li class="pagination__list-item">
-                        <a id="pagination-prev" href="" rel="prev">
+                        <a id="pagination-prev" href="#" rel="prev">
                         </a>
                     </li>
                     <li class="pagination__list-item">
-                        <a class="pagination__list-page" href="#" data-page='1'>
+                        <a class="pagination__list-page pagination-page" id="current-page" href="#" data-page='1'>
                             1
                         </a>
                     </li>
                     <li class="pagination__list-item">
-                        <a class="pagination__list-page" href="" data-page='2'>
-                        2
+                        <a class="pagination__list-page pagination-page" href="#" data-page='2'>
+                            2
                         </a>
                     </li>
                     <li class="pagination__list-item">
-                        <a class="pagination__list-page" href="" data-page='3'>
-                        3
+                        <a class="pagination__list-page pagination-page" href="#" data-page='3'>
+                            3
                         </a>
                     </li>
                     <li class="pagination__list-item">
-                        <a class="pagination__list-page" href="" data-page='4'>
-                        4
+                        <a class="pagination__list-page pagination-page" href="#" data-page='4'>
+                            4
                         </a>
                     </li>
                     <li class="pagination__list-item">
-                        <a class="pagination__list-page" href="" data-page='5'>
-                        5
+                        <a class="pagination__list-page pagination-page" href="#" data-page='5'>
+                            5
                         </a>
                     </li>
                     <li class="pagination__list-item">
-                        <a class="pagination__list-page" href="" data-page='6'>
-                        6
+                        <a class="pagination__list-page pagination-page" href="#" data-page='6'>
+                            6
                         </a>
                     </li>
                     <span class="pagination__list-item">
                         <a class="pagination__list-page" href="">
-                        ...
+                            ...
                         </a>
                     </span>
                     <li class="pagination__list-item">
-                        <a class="pagination__list-page" id="max-page" href="">
+                        <a class="pagination__list-page" id="max-page" href="#">
                             12
                         </a>
                     </li>
                     <li class="pagination__list-item">
-                        <a id="pagination-next" href="" rel="next">
+                        <a id="pagination-next" href="#" rel="next">
                         </a>
                     </li>
                 </ul>
@@ -132,6 +132,15 @@
     <script src="https://use.fontawesome.com/939de38553.js"></script>
     <script src="/js/common.bundle.js"></script>
     <script src="/js/articles.bundle.js"></script>
+    <script>
+        const sendRequest = async () => {
+            const a = await 3
+            console.log(a)
+            return a
+        }
+
+    //    sendRequest()
+    </script>
 </body>
 
 </html>
