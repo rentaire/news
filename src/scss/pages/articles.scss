@@ -44,7 +44,14 @@
     }
 }
 
-li > a.pagination__list-page {
+.pagination__list-prev {
+    text-align: center;
+    width: 3rem;
+    display: block;
+}
+
+li > a.pagination__list-page,
+a.pagination__list-prev {
     text-align: center;
     height: 3rem;
     width: 3rem;
@@ -80,9 +87,3 @@ li > a.pagination__list-page {
     position: relative;
     @include arrow(135deg);
 }
-
-/*
-.menu-item:after {
-  content: ' | ';
-}
-*/

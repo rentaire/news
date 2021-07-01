@@ -1,5 +1,5 @@
 
-export var parseUrl = () => {
+export var parseUrl = (url) => {
     var parsedUrl = {
         endpoint: undefined,
         parameters: undefined,
@@ -7,9 +7,8 @@ export var parseUrl = () => {
     }
 
     let keys = Object.keys(parsedUrl)
-    let url
 
-    window.location.search === '' ? url = ['everything', 'q=weather&sortBy=popularity'] : url = (window.location.search).slice(1).split('_')
+    url === '' ? url = ['everything', 'q=weather&sortBy=popularity'] : url = (window.location.search).slice(1).split('_')
 
     let url_pos = 0
 

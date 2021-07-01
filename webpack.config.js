@@ -1,5 +1,4 @@
 var glob = require("glob")
-//require("regenerator-runtime/runtime");
 
 module.exports = {
   mode: 'development',
@@ -43,12 +42,9 @@ module.exports = {
           loader: 'babel-loader',
           options: {
             presets: [
-              ["@babel/preset-env",
-              // {
-              //   'useBuiltIns': 'usage',
-              //   'corejs': 3
-              // }
-            ]
+            [ "@babel/preset-env", { 
+              // "debug": true, "useBuiltIns": "usage", "corejs": "3.8" 
+            }]
             ],
           }
         }
