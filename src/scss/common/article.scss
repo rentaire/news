@@ -57,6 +57,10 @@
             }
         }
     }
+    &:after {
+        flex-basis: 30%;
+        content: "";
+    }
 }
 
 .content-exist > .article__subtitle {

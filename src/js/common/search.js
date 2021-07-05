@@ -6,6 +6,6 @@ let input = document.getElementById('text-to-find');
 input.addEventListener("keydown", function(event) {
     if (event.key === "Enter") {
         event.preventDefault();
-        showResult(getUrl(`top-headlines`, `q=${input.value}`))
+        showResult(createUrl(`top-headlines`, `q=${input.value}`))
     }
 });

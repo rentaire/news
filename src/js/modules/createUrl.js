@@ -6,9 +6,9 @@ export var createUrl = (parsedUrl) => {
         '?' +
         parsedUrl.parameters +
         '&pageSize=' + page_size + 
-        parsedUrl.page +
+        '&page=' + parsedUrl.page +
         '&apiKey=2bd6dd17600247a38a98d6bc50ef6368';
-    return url
+        return url
 }
 
 
