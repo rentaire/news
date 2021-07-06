@@ -16,6 +16,7 @@ export var parseUrl = (url) => {
         parsedUrl[keys[url_pos]] = element
         url_pos++
     });
-    parsedUrl.page =parsedUrl.page.slice(-1)
+    parsedUrl.page = parsedUrl.page.slice(-1)
+
     return parsedUrl
 }

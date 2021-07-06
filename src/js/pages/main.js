@@ -1,9 +1,6 @@
-import {createUrl} from './../modules/createUrl.js';
-import {showResult} from './../modules/showResult.js';
-import {sendRequest} from './../modules/sendRequest.js';
-import {parseUrl} from './../modules/parseUrl.js';
+import { updateArticles } from './../modules/updateArticles.js'
 
-//var data = sendRequest(createUrl(parseUrl()))
-//console.log(data)
-//showResult(data)
+var url = window.location.search
+
+updateArticles(url)
 

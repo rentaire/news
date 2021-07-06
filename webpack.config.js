@@ -43,11 +43,12 @@ module.exports = {
           options: {
             presets: [
             [ "@babel/preset-env", { 
-              // "debug": true, "useBuiltIns": "usage", "corejs": "3.8" 
+               "targets":  { "node": "current" }
             }]
             ],
+            
           }
-        }
+        },
       }
     ]
   },
