@@ -1,6 +1,6 @@
 export var sendRequest = async (url) => {
   var req = new Request(url);
-  let response = await fetch(req)
+  const response = await fetch(req) // req = url
 
   if (response.ok) {
     return response

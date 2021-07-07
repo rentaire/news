@@ -1,8 +1,8 @@
 
 export var parseUrl = (url) => {
     var parsedUrl = {
-        endpoint: undefined,
-        parameters: undefined,
+        endpoint: null,
+        parameters: null,
         page: '1'
     }
 

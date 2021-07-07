@@ -152,7 +152,7 @@ document.getElementById('pagination-prev').addEventListener('click', (event) => 
         current_page_url--
     }
 
-    if (current_page_url <= max_page - 8 && current_page_url > right_limit && max_page >= right_limit) { //&& current_page_url > right_limit почему-то было?
+    if (current_page_url <= max_page - 8 && current_page_url > right_limit && max_page >= right_limit) { 
         var pre_max_page = document.getElementById('pre-last-page')
         pre_max_page.removeChild(pre_max_page.querySelector('.pagination__list-prev'))
         var pre_max = document.createElement('span')
